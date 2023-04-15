@@ -26,5 +26,8 @@
     "@commitlint/config-conventional": "^17.4.4",
     "husky": "^8.0.3",
     "prettier": "^2.8.7"
+  },
+  "engines": {
+    "node": ">=16.16.0"
   }
 }
