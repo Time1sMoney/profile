@@ -1,7 +1,10 @@
 import Head from 'next/head';
+import Image from 'next/image';
+import logo from '@/../public/dog.png';
 import styles from '@/styles/Home.module.css';
 import dayjs from 'dayjs';
 import 'dayjs/locale/zh-cn';
+import Marquee from 'react-fast-marquee';
 dayjs.locale('zh-cn');
 
 export default function Home() {
@@ -14,15 +17,26 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
+        <Marquee>
+          {Array.from({ length: 30 }, (_, index) => index.toString()).map(
+            (e) => (
+              <p key={e} className="mr-6 font-bold">
+                Welcome
+              </p>
+            )
+          )}
+        </Marquee>
         <div className={styles.description}>
           <p>
             Welcome to Codercoin:
             <code className={styles.code}>http://codercoin.top</code>
           </p>
         </div>
-
+        <div>
+          <Image src={logo} width={200} height={200} alt="codercoin" />
+        </div>
         <div className="flex text-center">
-          备案中-{dayjs().format('YYYY-MM-DD H:mm dddd')}
+          <span>备案中-{dayjs().format('YYYY-MM-DD H:mm dddd')}</span>
         </div>
       </main>
     </>
