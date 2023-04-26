@@ -14,7 +14,7 @@ export default function Navbar() {
         <div className="flex flex-col">
           <span className="antialiased italic font-bold">欢迎来到硬币小屋</span>
           <code className="text-slate-500 cursor-pointer">
-            <a href="http://codercoin.top">codercoin.top</a>
+            <a href="https://codercoin.top">codercoin.top</a>
           </code>
         </div>
       </div>
