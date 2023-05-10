@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Navbar from './layout/navbar';
-import Body from './layout/body';
-import Footer from './layout/footer';
+import Navbar from './components/navbar';
+import Body from './components/body';
+import Footer from './components/footer';
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="flex h-[100vh] flex-col bg-slate-50 dark:bg-gray-800">
+      <main className="flex flex-col h-full">
         <Navbar />
         <Body />
         <Footer />
