@@ -263,6 +263,13 @@
   dependencies:
     "@iconify/types" "*"
 
+"@iconify/icons-simple-icons@^1.2.52":
+  version "1.2.52"
+  resolved "https://registry.npmmirror.com/@iconify/icons-simple-icons/-/icons-simple-icons-1.2.52.tgz#c117822a52095ebe2064b8b6d5ab5dc19e99912f"
+  integrity sha512-XbtdZI/hIASMtILacEMcr6nJshRSWa7LVBHND8VonxbjfMAPwOnxmkDWzt954l/8FMPFkT4IaI+AIPbITc99+w==
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify/icons-tabler@^1.2.74":
   version "1.2.74"
   resolved "https://registry.npmmirror.com/@iconify/icons-tabler/-/icons-tabler-1.2.74.tgz#ded89a08581bdfe77b36638ccb7897bb214dac68"
