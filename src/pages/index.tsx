@@ -1,7 +1,7 @@
-import { ECOLOGY } from './constants/ecology';
+import { ECOLOGY } from '../constants/ecology';
 import { Icon } from '@iconify/react';
-import { TOOLS } from './constants/tools';
-import { LEARNING } from './constants/learning';
+import { TOOLS } from '../constants/tools';
+import { LEARNING } from '../constants/learning';
 export default function Home() {
   return (
     <div className="container mx-auto mb-16 mt-24 flex flex-1 flex-col gap-8 overflow-y-auto px-2 pt-8 dark:bg-gray-800">
