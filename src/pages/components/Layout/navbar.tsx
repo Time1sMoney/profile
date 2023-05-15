@@ -28,7 +28,7 @@ export default function Navbar() {
           priority
           className="hover-transition h-auto cursor-pointer hover:scale-105"
         />
-        <span className="cursor-pointer font-semibold dark:text-white max-sm:hidden sm:text-lg lg:text-lg xl:text-xl">
+        <span className="cursor-pointer font-semibold dark:text-slate-300 max-sm:hidden sm:text-lg lg:text-lg xl:text-xl">
           <a href="https://codercoin.top">Codercoin</a>
         </span>
       </div>
@@ -37,14 +37,14 @@ export default function Navbar() {
           <Icon
             icon={githubLogo}
             fontSize={30}
-            className="cursor-pointer hover:scale-110 dark:text-white"
+            className="cursor-pointer hover:scale-110 dark:text-slate-300"
           />
         </a>
         <a href="https://space.bilibili.com/164577534" target="_blank">
           <Icon
             icon={bilibiliLogo}
             fontSize={30}
-            className="cursor-pointer hover:scale-110 dark:text-white"
+            className="cursor-pointer hover:scale-110 dark:text-slate-300"
           />
         </a>
         <button
