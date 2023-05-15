@@ -23,17 +23,14 @@ export default function Navbar() {
       <div className="flex items-center space-x-4">
         <Image
           src={logo}
-          width={80}
+          width={40}
           alt="codercoin"
           priority
           className="hover-transition h-auto cursor-pointer hover:scale-105"
         />
-        <div className="flex flex-col dark:text-white">
-          <span className="font-bold italic antialiased">欢迎来到硬币小屋</span>
-          <code className="cursor-pointer ">
-            <a href="https://codercoin.top">codercoin.top</a>
-          </code>
-        </div>
+        <span className="cursor-pointer font-semibold dark:text-white max-sm:hidden sm:text-lg lg:text-lg xl:text-xl">
+          <a href="https://codercoin.top">Codercoin</a>
+        </span>
       </div>
       <div className="flex items-center space-x-4">
         <a href="https://github.com/coderlcb" target="_blank">
