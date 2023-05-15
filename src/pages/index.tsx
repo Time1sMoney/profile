@@ -4,9 +4,9 @@ import { TOOLS } from './constants/tools';
 import { LEARNING } from './constants/learning';
 export default function Home() {
   return (
-    <div className="container mx-auto mb-16 mt-24 flex flex-1 flex-col gap-8 overflow-y-auto pt-8 px-2 dark:bg-gray-800">
+    <div className="container mx-auto mb-16 mt-24 flex flex-1 flex-col gap-8 overflow-y-auto px-2 pt-8 dark:bg-gray-800">
       <div className="grid gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
-        <div className="flex justify-between sm:col-span-4 md:col-span-4 lg:col-span-8">
+        <div className="flex items-center justify-between sm:col-span-4 md:col-span-6 lg:col-span-8">
           <span className="text-lg font-semibold">Ecology</span>
           <span className="max-w-[50%] overflow-hidden text-ellipsis max-sm:hidden">
             Current must-popular techs.
@@ -20,7 +20,7 @@ export default function Home() {
         ))}
       </div>
       <div className="grid gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
-        <div className="flex justify-between sm:col-span-4 md:col-span-4 lg:col-span-8">
+        <div className="flex items-center justify-between sm:col-span-4 md:col-span-6 lg:col-span-8">
           <span className="text-lg font-semibold">Tools</span>
           <span className="max-w-[50%] overflow-hidden text-ellipsis max-sm:hidden">
             A good tool makes you do twice as much with half the work.
@@ -34,7 +34,7 @@ export default function Home() {
         ))}
       </div>
       <div className="grid gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
-        <div className="flex justify-between sm:col-span-4 md:col-span-4 lg:col-span-8">
+        <div className="flex items-center justify-between sm:col-span-4 md:col-span-6 lg:col-span-8">
           <span className="text-lg font-semibold">Learning</span>
           <span className="max-w-[50%] overflow-hidden text-ellipsis max-sm:hidden">
             Keep learning and keep enthusiasm.
