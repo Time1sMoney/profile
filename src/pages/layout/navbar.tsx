@@ -6,18 +6,18 @@ import bilibiliLogo from '@iconify/icons-tabler/brand-bilibili';
 import sunFilled from '@iconify/icons-tabler/sun-filled';
 import moonFilled from '@iconify/icons-tabler/moon-filled';
 import { useLocalStorageState } from 'ahooks';
+import { useEffect } from 'react';
 export default function Navbar() {
   const [theme, setTheme] = useLocalStorageState('theme', {
     defaultValue: 'light',
   });
-  const handleThemeChange = () => {
+  useEffect(() => {
     if (theme === 'light') {
-      document.documentElement.classList.add('dark');
-    } else {
       document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
     }
-    setTheme((state) => (state === 'light' ? 'dark' : 'light'));
-  };
+  }, [theme]);
   return (
     <div className="fixed left-0 right-0 top-0 z-[999] flex h-24 items-center justify-between border-b px-10 shadow-slate-500 drop-shadow dark:border-none dark:bg-gray-900">
       <div className="flex items-center space-x-4">
@@ -50,7 +50,12 @@ export default function Navbar() {
             className="cursor-pointer hover:scale-110 dark:text-white"
           />
         </a>
-        <button type="button" onClick={handleThemeChange}>
+        <button
+          type="button"
+          onClick={() =>
+            setTheme((state) => (state === 'light' ? 'dark' : 'light'))
+          }
+        >
           {theme === 'light' ? (
             <Icon
               icon={sunFilled}
