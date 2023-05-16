@@ -1,4 +1,5 @@
 // build: 影响构建系统或外部依赖项的更改（示例范围：gulp、broccoli、npm）
+// chore
 // ci: 更改我们的 CI 配置文件和脚本（示例范围：Travis、Circle、BrowserStack、SauceLabs）
 // docs: 文档修改
 // ui: 页面ui修改
@@ -42,12 +43,8 @@ module.exports = {
                 'fix',
                 'perf',
                 'refactor',
-                'revert',
                 'style',
                 'test',
-                'translation',
-                'security',
-                'changeset',
             ],
         ],
     },
