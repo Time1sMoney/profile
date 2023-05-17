@@ -2,6 +2,7 @@ import { ECOLOGY } from '../constants/ecology';
 import { Icon } from '@iconify/react';
 import { TOOLS } from '../constants/tools';
 import { LEARNING } from '../constants/learning';
+import arrowBigRight from '@iconify/icons-tabler/arrow-big-right';
 export default function Home() {
   return (
     <div className="container mx-auto mb-16 mt-24 flex flex-1 flex-col gap-8 overflow-y-auto px-2 pt-8 dark:bg-gray-800">
@@ -13,9 +14,19 @@ export default function Home() {
           </span>
         </div>
         {ECOLOGY.map((e) => (
-          <a href={e.url} target="_blank" key={e.name} className="item">
+          <a
+            href={e.url}
+            target="_blank"
+            key={e.name}
+            className="item group/item relative"
+          >
             <Icon icon={e.icon} fontSize={18} className="mr-2" />
             {e.name}
+            <Icon
+              icon={arrowBigRight}
+              fontSize={18}
+              className="absolute right-1 opacity-0 transition delay-100 duration-300 ease-in-out group-hover/item:-translate-x-1 group-hover/item:opacity-100"
+            />
           </a>
         ))}
       </div>
@@ -27,9 +38,19 @@ export default function Home() {
           </span>
         </div>
         {TOOLS.map((e) => (
-          <a href={e.url} target="_blank" key={e.name} className="item">
+          <a
+            href={e.url}
+            target="_blank"
+            key={e.name}
+            className="item group/item relative"
+          >
             <Icon icon={e.icon} fontSize={18} className="mr-2" />
             {e.name}
+            <Icon
+              icon={arrowBigRight}
+              fontSize={18}
+              className="absolute right-1 opacity-0 transition delay-100 duration-300 ease-in-out group-hover/item:-translate-x-1 group-hover/item:opacity-100"
+            />
           </a>
         ))}
       </div>
@@ -41,9 +62,19 @@ export default function Home() {
           </span>
         </div>
         {LEARNING.map((e) => (
-          <a href={e.url} target="_blank" key={e.name} className="item">
+          <a
+            href={e.url}
+            target="_blank"
+            key={e.name}
+            className="item group/item relative"
+          >
             <Icon icon={e.icon} fontSize={18} className="mr-2" />
             {e.name}
+            <Icon
+              icon={arrowBigRight}
+              fontSize={18}
+              className="absolute right-1 opacity-0 transition delay-100 duration-300 ease-in-out group-hover/item:-translate-x-1 group-hover/item:opacity-100"
+            />
           </a>
         ))}
       </div>
