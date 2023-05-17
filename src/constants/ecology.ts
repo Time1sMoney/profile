@@ -14,6 +14,8 @@ import webpackLogo from '@iconify/icons-simple-icons/webpack';
 import rollupLogo from '@iconify/icons-simple-icons/rollupdotjs';
 import tailwindcssLogo from '@iconify/icons-simple-icons/tailwindcss';
 import unocssLogo from '@iconify/icons-simple-icons/unocss';
+import sassLogo from '@iconify/icons-tabler/brand-sass';
+import lessLogo from '@iconify/icons-simple-icons/less';
 import jestLogo from '@iconify/icons-simple-icons/jest';
 import vitestLogo from '@iconify/icons-simple-icons/vitest';
 import nodejsLogo from '@iconify/icons-simple-icons/nodedotjs';
@@ -23,6 +25,10 @@ import nestjsLogo from '@iconify/icons-simple-icons/nestjs';
 import prismaLogo from '@iconify/icons-tabler/brand-prisma';
 import reactNativeLogo from '@iconify/icons-tabler/brand-react-native';
 import electronLogo from '@iconify/icons-simple-icons/electron';
+import sequelizeLogo from '@iconify/icons-simple-icons/sequelize';
+import mongooseLogo from '@iconify/icons-simple-icons/mongoose';
+import graphqlLogo from '@iconify/icons-tabler/brand-graphql';
+import axiosLogo from '@iconify/icons-simple-icons/axios';
 import { Item } from '@/types';
 
 export const ECOLOGY: Item[] = [
@@ -102,6 +108,16 @@ export const ECOLOGY: Item[] = [
     url: 'https://unocss.dev/',
   },
   {
+    name: 'Sass',
+    icon: sassLogo,
+    url: 'https://www.sass.hk/',
+  },
+  {
+    name: 'Less',
+    icon: lessLogo,
+    url: 'https://less.bootcss.com/',
+  },
+  {
     name: 'Jest',
     icon: jestLogo,
     url: 'https://jestjs.io/',
@@ -137,11 +153,6 @@ export const ECOLOGY: Item[] = [
     url: 'https://nestjs.com/',
   },
   {
-    name: 'Prisma',
-    icon: prismaLogo,
-    url: 'https://www.prisma.io/',
-  },
-  {
     name: 'ReactNative',
     icon: reactNativeLogo,
     url: 'https://www.reactnative.cn/',
@@ -150,5 +161,30 @@ export const ECOLOGY: Item[] = [
     name: 'Electron',
     icon: electronLogo,
     url: 'https://www.electronjs.org/',
+  },
+  {
+    name: 'Prisma',
+    icon: prismaLogo,
+    url: 'https://www.prisma.io/',
+  },
+  {
+    name: 'Sequelize',
+    icon: sequelizeLogo,
+    url: 'https://www.sequelize.cn/',
+  },
+  {
+    name: 'Mongoose',
+    icon: mongooseLogo,
+    url: 'https://mongoosejs.com/',
+  },
+  {
+    name: 'GraphQL',
+    icon: graphqlLogo,
+    url: 'https://graphql.cn/',
+  },
+  {
+    name: 'Axios',
+    icon: axiosLogo,
+    url: 'https://www.axios-http.cn/',
   },
 ];
