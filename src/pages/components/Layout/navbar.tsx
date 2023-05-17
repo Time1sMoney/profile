@@ -2,6 +2,7 @@ import Image from 'next/image';
 import logo from '@/../public/dog.png';
 import { Icon } from '@iconify/react';
 import githubLogo from '@iconify/icons-carbon/logo-github';
+import twitterLogo from '@iconify/icons-carbon/logo-twitter';
 import bilibiliLogo from '@iconify/icons-tabler/brand-bilibili';
 import sunFilled from '@iconify/icons-tabler/sun-filled';
 import moonFilled from '@iconify/icons-tabler/moon-filled';
@@ -36,6 +37,13 @@ export default function Navbar() {
         <a href="https://github.com/coderlcb" target="_blank">
           <Icon
             icon={githubLogo}
+            fontSize={30}
+            className="cursor-pointer hover:scale-110 dark:text-slate-300"
+          />
+        </a>
+        <a href="https://twitter.com/mozlilove" target="_blank">
+          <Icon
+            icon={twitterLogo}
             fontSize={30}
             className="cursor-pointer hover:scale-110 dark:text-slate-300"
           />
