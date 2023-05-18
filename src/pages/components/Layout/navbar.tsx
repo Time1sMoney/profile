@@ -50,7 +50,7 @@ export default function Navbar() {
         {menu.map((item) => (
           <li
             key={item.label}
-            className={`cursor-pointer ${
+            className={`cursor-pointer hover:text-green-500 ${
               router.asPath === item.route ? ' text-green-500' : undefined
             }`}
           >
