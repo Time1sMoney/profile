@@ -20,8 +20,10 @@ export default function Home() {
             key={e.name}
             className="item group/item relative"
           >
-            <Icon icon={e.icon} fontSize={18} className="mr-2" />
-            {e.name}
+            <span className="flex items-center space-x-2 transition delay-100 duration-300 ease-in-out group-hover/item:-translate-x-2">
+              <Icon icon={e.icon} fontSize={18} />
+              <span className="">{e.name}</span>
+            </span>
             <Icon
               icon={arrowBigRight}
               fontSize={18}
@@ -44,12 +46,14 @@ export default function Home() {
             key={e.name}
             className="item group/item relative"
           >
-            <Icon icon={e.icon} fontSize={18} className="mr-2" />
-            {e.name}
+            <span className="flex items-center space-x-2 transition delay-100 duration-300 ease-in-out group-hover/item:-translate-x-1">
+              <Icon icon={e.icon} fontSize={18} />
+              <span className="">{e.name}</span>
+            </span>
             <Icon
               icon={arrowBigRight}
               fontSize={18}
-              className="absolute right-1 opacity-0 transition delay-100 duration-300 ease-in-out group-hover/item:-translate-x-1 group-hover/item:opacity-100"
+              className="absolute right-1 opacity-0 transition delay-100 duration-300 ease-in-out group-hover/item:-translate-x-2 group-hover/item:opacity-100"
             />
           </a>
         ))}
@@ -68,8 +72,10 @@ export default function Home() {
             key={e.name}
             className="item group/item relative"
           >
-            <Icon icon={e.icon} fontSize={18} className="mr-2" />
-            {e.name}
+            <span className="flex items-center space-x-2 transition delay-100 duration-300 ease-in-out group-hover/item:-translate-x-2">
+              <Icon icon={e.icon} fontSize={18} />
+              <span className="">{e.name}</span>
+            </span>
             <Icon
               icon={arrowBigRight}
               fontSize={18}
