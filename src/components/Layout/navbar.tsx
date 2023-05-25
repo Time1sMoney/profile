@@ -50,8 +50,8 @@ export default function Navbar() {
         {menu.map((item) => (
           <li
             key={item.label}
-            className={`cursor-pointer hover:text-green-500 ${
-              router.asPath === item.route ? ' text-green-500' : undefined
+            className={`cursor-pointer hover:text-yellow-500 ${
+              router.asPath === item.route ? ' text-yellow-500' : undefined
             }`}
           >
             <Link href={item.route}>{item.label}</Link>
@@ -63,21 +63,21 @@ export default function Navbar() {
           <Icon
             icon={githubLogo}
             fontSize={30}
-            className="cursor-pointer hover:scale-110"
+            className="cursor-pointer hover:text-yellow-500"
           />
         </a>
         <a href="https://twitter.com/mozlilove" target="_blank">
           <Icon
             icon={twitterLogo}
             fontSize={30}
-            className="cursor-pointer hover:scale-110"
+            className="cursor-pointer hover:text-yellow-500"
           />
         </a>
         <a href="https://space.bilibili.com/164577534" target="_blank">
           <Icon
             icon={bilibiliLogo}
             fontSize={30}
-            className="cursor-pointer hover:scale-110"
+            className="cursor-pointer hover:text-yellow-500"
           />
         </a>
         <button
