@@ -10,16 +10,7 @@ import moonFilled from '@iconify/icons-tabler/moon-filled';
 import { useLocalStorageState } from 'ahooks';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-const menu = [
-  {
-    label: 'Home',
-    route: '/',
-  },
-  {
-    label: 'NoteBook',
-    route: '/notebook',
-  },
-];
+import { MENU } from '@/constants/navbar';
 export default function Navbar() {
   const router = useRouter();
   const [theme, setTheme] = useLocalStorageState('theme', {
@@ -47,7 +38,7 @@ export default function Navbar() {
         </span>
       </div>
       <ul className="mx-20 flex flex-1 items-center justify-end gap-8 text-lg">
-        {menu.map((item) => (
+        {MENU.map((item) => (
           <li
             key={item.label}
             className={`cursor-pointer hover:text-yellow-500 ${
