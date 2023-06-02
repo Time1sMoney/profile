@@ -22,6 +22,9 @@ html {
   .item {
     @apply flex cursor-pointer items-center justify-center text-ellipsis rounded-lg border border-slate-300 p-1 shadow  hover:bg-slate-100 hover:drop-shadow active:bg-slate-200 dark:border-slate-500 dark:hover:bg-slate-700 dark:active:bg-transparent;
   }
+  .input {
+    @apply h-10 w-full rounded-lg border-none p-1 bg-slate-200 dark:bg-gray-700 focus:outline focus:outline-yellow-500;
+  }
 }
 @layer utilities {
   .hover-transition {
