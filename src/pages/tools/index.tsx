@@ -65,6 +65,7 @@ export default function NoteBook() {
           <label className="font-semibold">Digits</label>
           <select
             className="input col-span-3 text-center"
+            defaultValue={state.digits}
             onChange={(e) => setState({ digits: parseInt(e.target.value) })}
           >
             {DIGITS.map((digits) => (
