@@ -1,3 +1,3 @@
 # ✨[Codercoin](http://codercoin.top)
 
-## I have no idea about the website what should be now
+A site that focuses on front-end technology and offers some interesting tools.
