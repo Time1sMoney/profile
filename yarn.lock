@@ -263,6 +263,13 @@
   dependencies:
     "@iconify/types" "*"
 
+"@iconify/icons-ep@^1.2.11":
+  version "1.2.11"
+  resolved "https://registry.npmmirror.com/@iconify/icons-ep/-/icons-ep-1.2.11.tgz#b74b6b067c5ce4b465128fe9f7e1de1b65e69e45"
+  integrity sha512-dD+2G2zCRa4tj8Gj79eqDxoxaXz6eU6EtIzT2SLPeaUFzybZlc4hykVkciffSDjjQNKp3LwKFQ2YadGa5mvdxg==
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify/icons-simple-icons@^1.2.52":
   version "1.2.52"
   resolved "https://registry.npmmirror.com/@iconify/icons-simple-icons/-/icons-simple-icons-1.2.52.tgz#c117822a52095ebe2064b8b6d5ab5dc19e99912f"
