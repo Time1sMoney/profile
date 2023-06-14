@@ -11,6 +11,7 @@ import nuxtjsLogo from '@iconify/icons-tabler/brand-nuxt';
 import astroLogo from '@iconify/icons-simple-icons/astro';
 import viteLogo from '@iconify/icons-tabler/brand-vite';
 import webpackLogo from '@iconify/icons-simple-icons/webpack';
+import esbuildLogo from '@iconify/icons-simple-icons/esbuild';
 import rollupLogo from '@iconify/icons-simple-icons/rollupdotjs';
 import tailwindcssLogo from '@iconify/icons-simple-icons/tailwindcss';
 import unocssLogo from '@iconify/icons-simple-icons/unocss';
@@ -29,6 +30,9 @@ import sequelizeLogo from '@iconify/icons-simple-icons/sequelize';
 import mongooseLogo from '@iconify/icons-simple-icons/mongoose';
 import graphqlLogo from '@iconify/icons-tabler/brand-graphql';
 import axiosLogo from '@iconify/icons-simple-icons/axios';
+import threejsLogo from '@iconify/icons-tabler/brand-threejs';
+import echartsLogo from '@iconify/icons-simple-icons/apacheecharts';
+import d3dotjsLogo from '@iconify/icons-simple-icons/d3dotjs';
 import { Item } from '@/types';
 
 export const ECOLOGY: Item[] = [
@@ -93,6 +97,11 @@ export const ECOLOGY: Item[] = [
     url: 'https://webpack.js.org/',
   },
   {
+    name: 'ESbuild',
+    icon: esbuildLogo,
+    url: 'https://esbuild.docschina.org/',
+  },
+  {
     name: 'Rollup',
     icon: rollupLogo,
     url: 'https://rollupjs.org/',
@@ -133,7 +142,7 @@ export const ECOLOGY: Item[] = [
     url: 'https://www.typescriptlang.org/',
   },
   {
-    name: 'Node',
+    name: 'Node.js',
     icon: nodejsLogo,
     url: 'https://nodejs.org/en',
   },
@@ -186,5 +195,20 @@ export const ECOLOGY: Item[] = [
     name: 'Axios',
     icon: axiosLogo,
     url: 'https://www.axios-http.cn/',
+  },
+  {
+    name: 'Three.js',
+    icon: threejsLogo,
+    url: 'https://threejs.org/',
+  },
+  {
+    name: 'ECharts',
+    icon: echartsLogo,
+    url: 'https://echarts.apache.org/',
+  },
+  {
+    name: 'D3.js',
+    icon: d3dotjsLogo,
+    url: 'https://d3js.org/',
   },
 ];

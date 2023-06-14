@@ -2,6 +2,7 @@ import vscodeLogo from '@iconify/icons-tabler/brand-vscode';
 import postmanLogo from '@iconify/icons-simple-icons/postman';
 import swaggerLogo from '@iconify/icons-simple-icons/swagger';
 import gitLogo from '@iconify/icons-tabler/brand-git';
+import gitlabLogo from '@iconify/icons-tabler/brand-gitlab';
 import lodashLogo from '@iconify/icons-simple-icons/lodash';
 import mysqlLogo from '@iconify/icons-tabler/brand-mysql';
 import mongodbLogo from '@iconify/icons-tabler/brand-mongodb';
@@ -18,6 +19,11 @@ export const TOOLS: Item[] = [
     name: 'Git',
     icon: gitLogo,
     url: 'https://git-scm.com/',
+  },
+  {
+    name: 'Gitlab',
+    icon: gitlabLogo,
+    url: 'https://gitlab.com/',
   },
   {
     name: 'Postman',
