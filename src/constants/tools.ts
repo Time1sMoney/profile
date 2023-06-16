@@ -4,6 +4,7 @@ import swaggerLogo from '@iconify/icons-simple-icons/swagger';
 import gitLogo from '@iconify/icons-tabler/brand-git';
 import gitlabLogo from '@iconify/icons-tabler/brand-gitlab';
 import lodashLogo from '@iconify/icons-simple-icons/lodash';
+import postgresqlLogo from '@iconify/icons-simple-icons/postgresql';
 import mysqlLogo from '@iconify/icons-tabler/brand-mysql';
 import mongodbLogo from '@iconify/icons-tabler/brand-mongodb';
 import rabbitmqLogo from '@iconify/icons-simple-icons/rabbitmq';
@@ -39,6 +40,11 @@ export const TOOLS: Item[] = [
     name: 'Lodash',
     icon: lodashLogo,
     url: 'https://www.lodashjs.com/',
+  },
+  {
+    name: 'PostgreSQL',
+    icon: postgresqlLogo,
+    url: 'https://www.postgresql.org/',
   },
   {
     name: 'MySQL',
