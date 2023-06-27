@@ -6,7 +6,7 @@ import arrowBigRight from '@iconify/icons-tabler/arrow-big-right';
 import { UI } from '@/constants/ui';
 export default function Home() {
   return (
-    <div className="container mx-auto mb-16 mt-24 flex flex-1 flex-col gap-8 overflow-y-auto px-2 pt-8 dark:bg-gray-800 dark:text-slate-300">
+    <div className="flex flex-1 flex-col gap-8  px-2 py-8 dark:bg-gray-800 dark:text-slate-300">
       <div className="grid gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
         <div className="flex items-center justify-between sm:col-span-4 md:col-span-6 lg:col-span-8">
           <span className="text-lg font-semibold">Ecology</span>
