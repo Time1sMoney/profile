@@ -18,6 +18,23 @@ html {
   border-radius: 8px;
   background-color: #9f9f9f;
 }
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+.dark::view-transition-old(root) {
+  z-index: 1;
+}
+.dark::view-transition-new(root) {
+  z-index: 999;
+}
+::view-transition-old(root) {
+  z-index: 999;
+}
+::view-transition-new(root) {
+  z-index: 1;
+}
 @layer components {
   .item {
     @apply flex cursor-pointer items-center justify-center text-ellipsis rounded-lg border border-slate-300 p-1 shadow  hover:bg-slate-100 hover:drop-shadow active:bg-slate-200 dark:border-slate-500 dark:hover:bg-slate-700 dark:active:bg-transparent;
