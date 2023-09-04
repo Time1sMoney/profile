@@ -18,18 +18,21 @@ export default function Home() {
           <a href="https://codercoin.top">Codercoin</a>
         </span>
       </div>
-      <div className="space-y-2">
-        <p>😊Hi!,I am codercoin,a front-end engineer.</p>
+      <div className="space-y-2 mt-8">
+        <p>😊Hey!,I am codercoin,a front-end engineer.</p>
         <p>
-          This is my personal website, is to collect some technical community or
-          interesting web sites.you can find those in
+          <span>
+            This is my personal website, is to collect some technical community
+            or interesting web sites.you can find those in
+          </span>
           <Link href="./navigator" className="underline">
-            {' '}
-            here
+            <span className="ml-1 hover:text-slate-900 dark:hover:text-slate-300">
+              here
+            </span>
           </Link>
         </p>
       </div>
-      <div className="mt-8 text-lg font-semibold">what i use in my work ?</div>
+      <div className="mt-8 text-lg font-semibold">What i use in my work ?</div>
       <ul className="mt-4 space-y-2">
         <li>
           Front-End : React / Vue / Next.js / Typescript / Tailwindcss / Zustand
