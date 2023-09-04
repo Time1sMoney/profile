@@ -1,34 +1,34 @@
 // components/PageWithTransition.tsx
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { AppProps } from 'next/app';
 import cn from 'classnames';
 const PageWithTransition = ({ Component, pageProps, router }: AppProps) => {
-  const prevScreen = useRef(Component);
   const [transitioning, setTransitioning] = useState(false);
   useEffect(() => {
-    const handler = () => {
-      setTransitioning(true);
-      setTimeout(() => {
-        prevScreen.current = Component;
-        setTransitioning(false);
-      }, 280);
-    };
-    router.events.on('routeChangeComplete', handler);
-    return () => {
-      router.events.off('routeChangeComplete', handler);
-    };
-  }, [Component, router.events]);
+    const handleStart = () => setTransitioning(true);
+    const handleComplete = () => setTransitioning(false);
+    
+    router.events.on('routeChangeStart', handleStart);
+    router.events.on('routeChangeComplete', handleComplete);
+    router.events.on('routeChangeError', handleComplete);
 
-  const Screen = !transitioning ? Component : prevScreen.current;
+    return () => {
+      router.events.off('routeChangeStart', handleStart);
+      router.events.off('routeChangeComplete', handleComplete);
+      router.events.off('routeChangeError', handleComplete);
+    };
+  }, [router.events]);
 
   return (
     <div
       className={cn({
-        'animate-slideUpEnter': !transitioning,
-        'animate-slideUpLeave': transitioning,
+        transition: true,
+        'animate-in fade-in slide-in-from-bottom-20 duration-1000':
+          !transitioning,
+        'animate-out fade-out slide-out-to-top-20 duration-1000': transitioning,
       })}
     >
-      <Screen {...pageProps} />
+      <Component {...pageProps} />
     </div>
   );
 };
