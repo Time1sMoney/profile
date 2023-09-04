@@ -1,116 +1,56 @@
-import { ECOLOGY } from '../constants/ecology';
+import Image from 'next/image';
+import Link from 'next/link';
+import logo from 'public/dog.png';
 import { Icon } from '@iconify/react';
-import { TOOLS } from '../constants/tools';
-import { LEARNING } from '../constants/learning';
-import arrowBigRight from '@iconify/icons-tabler/arrow-big-right';
-import { UI } from '@/constants/ui';
+import mailIcon from '@iconify/icons-tabler/mail';
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col gap-8  px-2 py-8 dark:bg-gray-800 dark:text-slate-300">
-      <div className="grid gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
-        <div className="flex items-center justify-between sm:col-span-4 md:col-span-6 lg:col-span-8">
-          <span className="text-lg font-semibold">Ecology</span>
-          <span className="max-w-[50%] overflow-hidden text-ellipsis max-sm:hidden">
-            Current must-popular techs.
-          </span>
-        </div>
-        {ECOLOGY.map((e) => (
-          <a
-            href={e.url}
-            target="_blank"
-            key={e.name}
-            className="item group/item relative"
-          >
-            <span className="flex items-center space-x-2 transition delay-100 duration-300 ease-in-out group-hover/item:-translate-x-2">
-              <Icon icon={e.icon} fontSize={18} />
-              <span className="">{e.name}</span>
-            </span>
-            <Icon
-              icon={arrowBigRight}
-              fontSize={18}
-              className="absolute right-1 opacity-0 transition delay-100 duration-300 ease-in-out group-hover/item:-translate-x-1 group-hover/item:opacity-100"
-            />
-          </a>
-        ))}
+    <div className="container mx-auto h-full overflow-auto p-10">
+      <div className="flex items-center space-x-4">
+        <Image
+          src={logo}
+          width={40}
+          alt="codercoin"
+          priority
+          className="hover-transition h-auto cursor-pointer hover:scale-105"
+        />
+        <span className="cursor-pointer font-semibold max-sm:hidden sm:text-lg lg:text-lg xl:text-xl">
+          <a href="https://codercoin.top">Codercoin</a>
+        </span>
       </div>
-      <div className="grid gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
-        <div className="flex items-center justify-between sm:col-span-4 md:col-span-6 lg:col-span-8">
-          <span className="text-lg font-semibold">UI Library</span>
-          <span className="max-w-[50%] overflow-hidden text-ellipsis max-sm:hidden">
-            Help you design and build Beautiful interface.
-          </span>
-        </div>
-        {UI.map((e) => (
-          <a
-            href={e.url}
-            target="_blank"
-            key={e.name}
-            className="item group/item relative"
-          >
-            <span className="flex items-center space-x-2 transition delay-100 duration-300 ease-in-out group-hover/item:-translate-x-2">
-              <Icon icon={e.icon} fontSize={18} />
-              <span className="">{e.name}</span>
-            </span>
-            <Icon
-              icon={arrowBigRight}
-              fontSize={18}
-              className="absolute right-1 opacity-0 transition delay-100 duration-300 ease-in-out group-hover/item:-translate-x-1 group-hover/item:opacity-100"
-            />
-          </a>
-        ))}
+      <div className="space-y-2">
+        <p>😊Hi!,I am codercoin,a front-end engineer.</p>
+        <p>
+          This is my personal website, is to collect some technical community or
+          interesting web sites.you can find those in
+          <Link href="./navigator" className="underline">
+            {' '}
+            here
+          </Link>
+        </p>
       </div>
-      <div className="grid gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
-        <div className="flex items-center justify-between sm:col-span-4 md:col-span-6 lg:col-span-8">
-          <span className="text-lg font-semibold">Tools</span>
-          <span className="max-w-[50%] overflow-hidden text-ellipsis max-sm:hidden">
-            A good tool makes you do twice as much with half the work.
+      <div className="mt-8 text-lg font-semibold">what i use in my work ?</div>
+      <ul className="mt-4 space-y-2">
+        <li>
+          Front-End : React / Vue / Next.js / Typescript / Tailwindcss / Zustand
+          / Pinia / React-router / Ant Design / Ahooks / Iconify{' '}
+        </li>
+        <li>
+          Back-end: Node.js / Python / Koa / Nest / Prisma / MongoDB / MySQL
+        </li>
+        <li>Design: PS / 摹客</li>
+        <li>Tools: VSCode / Postman / Apifox</li>
+      </ul>
+      <div className="mt-8 text-lg font-semibold">About Work</div>
+      <ul className="mt-4 space-y-2">
+        <li className="flex items-center gap-2">
+          <span>Contact me:</span>
+          <span className="flex items-center gap-2">
+            <Icon icon={mailIcon} />
+            lichenbin1119@qq.com
           </span>
-        </div>
-        {TOOLS.map((e) => (
-          <a
-            href={e.url}
-            target="_blank"
-            key={e.name}
-            className="item group/item relative"
-          >
-            <span className="flex items-center space-x-2 transition delay-100 duration-300 ease-in-out group-hover/item:-translate-x-1">
-              <Icon icon={e.icon} fontSize={18} />
-              <span className="">{e.name}</span>
-            </span>
-            <Icon
-              icon={arrowBigRight}
-              fontSize={18}
-              className="absolute right-1 opacity-0 transition delay-100 duration-300 ease-in-out group-hover/item:-translate-x-2 group-hover/item:opacity-100"
-            />
-          </a>
-        ))}
-      </div>
-      <div className="grid gap-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8">
-        <div className="flex items-center justify-between sm:col-span-4 md:col-span-6 lg:col-span-8">
-          <span className="text-lg font-semibold">Learning</span>
-          <span className="max-w-[50%] overflow-hidden text-ellipsis max-sm:hidden">
-            Keep learning and keep enthusiasm.
-          </span>
-        </div>
-        {LEARNING.map((e) => (
-          <a
-            href={e.url}
-            target="_blank"
-            key={e.name}
-            className="item group/item relative"
-          >
-            <span className="flex items-center space-x-2 transition delay-100 duration-300 ease-in-out group-hover/item:-translate-x-2">
-              <Icon icon={e.icon} fontSize={18} />
-              <span className="">{e.name}</span>
-            </span>
-            <Icon
-              icon={arrowBigRight}
-              fontSize={18}
-              className="absolute right-1 opacity-0 transition delay-100 duration-300 ease-in-out group-hover/item:-translate-x-1 group-hover/item:opacity-100"
-            />
-          </a>
-        ))}
-      </div>
+        </li>
+      </ul>
     </div>
   );
 }

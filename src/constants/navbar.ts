@@ -4,8 +4,12 @@ interface MenuItem {
 }
 export const MENU: MenuItem[] = [
   {
-    label: 'Home',
-    route: '/',
+    label: '',
+    route:'/'
+  },
+  {
+    label: 'Navigator',
+    route: '/navigator',
   },
   {
     label: 'Tools',
