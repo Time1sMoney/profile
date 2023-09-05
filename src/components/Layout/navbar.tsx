@@ -70,11 +70,14 @@ export default function Navbar() {
         document.documentElement.classList.add('dark');
       }
     }
-  }, [ theme]);
+  }, [theme]);
   return (
     <div className="container fixed left-0  right-0 top-0 z-[999] mx-auto flex h-24 items-center justify-between px-4">
       {router.pathname !== '/' && (
-        <Link href="/">
+        <Link
+          href="/"
+          className="hover:animate-spin hover:text-slate-900 dark:hover:text-slate-300"
+        >
           <Icon icon={homeIcon} fontSize={24} />
         </Link>
       )}
