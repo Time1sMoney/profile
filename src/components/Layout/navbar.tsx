@@ -72,7 +72,7 @@ export default function Navbar() {
     }
   }, [ theme]);
   return (
-    <div className="container fixed left-0  right-0 top-0 z-[999] mx-auto flex h-24 items-center justify-between">
+    <div className="container fixed left-0  right-0 top-0 z-[999] mx-auto flex h-24 items-center justify-between px-4">
       {router.pathname !== '/' && (
         <Link href="/">
           <Icon icon={homeIcon} fontSize={24} />

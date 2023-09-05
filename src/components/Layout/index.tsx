@@ -20,7 +20,7 @@ export default function DefaultLayout({ children }: Props) {
       </Head>
       <main
         className={
-          'flex h-full flex-col px-2 text-slate-500 dark:bg-neutral-900 dark:text-slate-400 ' +
+          'flex h-full flex-col text-slate-500 dark:bg-neutral-900 dark:text-slate-400 ' +
           inter.className
         }
       >
