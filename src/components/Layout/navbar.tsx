@@ -96,7 +96,7 @@ export default function Navbar() {
         ))}
       </ul>
       <div className="flex items-center space-x-4">
-        <a href="https://github.com/coderlcb" target="_blank">
+        <a href="https://github.com/codercoin98" target="_blank">
           <Icon
             icon={githubLogo}
             fontSize={24}
