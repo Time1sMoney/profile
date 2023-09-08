@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Icon } from '@iconify/react';
 import homeIcon from '@iconify/icons-tabler/home';
+import bookIcon from '@iconify/icons-tabler/book';
 import githubLogo from '@iconify/icons-carbon/logo-github';
 import twitterLogo from '@iconify/icons-carbon/logo-twitter';
 import bilibiliLogo from '@iconify/icons-tabler/brand-bilibili';
@@ -96,6 +97,13 @@ export default function Navbar() {
         ))}
       </ul>
       <div className="flex items-center space-x-4">
+        <a href="https://blog.codercoin.top" target="_blank">
+          <Icon
+            icon={bookIcon}
+            fontSize={24}
+            className="cursor-pointer hover:text-slate-900 dark:hover:text-slate-300"
+          />
+        </a>
         <a href="https://github.com/codercoin98" target="_blank">
           <Icon
             icon={githubLogo}
