@@ -12,7 +12,7 @@ export const MENU: MenuItem[] = [
     route: '/navigator',
   },
   {
-    label: 'Tools',
-    route: '/tools',
+    label: 'Projects',
+    route: '/projects',
   },
 ];
