@@ -5,7 +5,7 @@ import Link from 'next/link';
 export default function NoteBook() {
   return (
     <div className="container mx-auto mt-24 space-y-8">
-      <ul className="grid grid-cols-4 gap-4 auto-rows-max">
+      <ul className="grid gap-4 auto-rows-max sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {projects.map(({ title, icon, desc, url, tech_icons }) => (
           <Link key={url} href={url} target="_blank">
             <li className="card" key={url}>

@@ -20,12 +20,12 @@ export default function DefaultLayout({ children }: Props) {
       </Head>
       <main
         className={
-          'flex h-full flex-col text-slate-500 dark:bg-neutral-900 dark:text-slate-400 ' +
+          'container mx-auto flex h-full flex-col text-slate-500 dark:bg-neutral-900 dark:text-slate-400 overflow-auto' +
           inter.className
         }
       >
         <Navbar />
-        <div className="mb-16 mt-24 flex-1 overflow-auto">{children}</div>
+        <div className="flex-1 p-4">{children}</div>
         <Footer />
       </main>
     </>
