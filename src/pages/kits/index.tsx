@@ -4,7 +4,7 @@ import { TOOLS } from '@/constants/tools';
 import { LEARNING } from '@/constants/learning';
 import arrowBigRight from '@iconify/icons-tabler/arrow-big-right';
 import { UI } from '@/constants/ui';
-export default function Home() {
+export default function Kits() {
   return (
     <div className=" container mx-auto flex flex-1 flex-col gap-8 px-4">
       <div className="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6 2xl:grid-cols-8">
