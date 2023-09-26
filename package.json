@@ -8,8 +8,7 @@
     "start": "next start",
     "prod": "next build && next start",
     "lint": "next lint",
-    "prettier": "prettier --write .",
-    "prepare": "husky install"
+    "prettier": "prettier --write ."
   },
   "dependencies": {
     "@types/node": "18.15.11",
@@ -35,7 +34,6 @@
     "@iconify/icons-tabler": "^1.2.74",
     "@iconify/react": "^4.1.0",
     "autoprefixer": "^10.4.14",
-    "husky": "^8.0.3",
     "postcss": "^8.4.21",
     "prettier": "^2.8.7",
     "prettier-plugin-tailwindcss": "^0.2.8",
