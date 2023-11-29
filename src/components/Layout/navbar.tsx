@@ -1,16 +1,16 @@
-import Link from 'next/link';
-import { Icon } from '@iconify/react';
-import homeIcon from '@iconify/icons-tabler/home';
-import bookIcon from '@iconify/icons-tabler/book';
+import { MENU } from '@/constants/navbar';
 import githubLogo from '@iconify/icons-carbon/logo-github';
 import twitterLogo from '@iconify/icons-carbon/logo-twitter';
+import bookIcon from '@iconify/icons-tabler/book';
 import bilibiliLogo from '@iconify/icons-tabler/brand-bilibili';
-import sun from '@iconify/icons-tabler/sun';
+import homeIcon from '@iconify/icons-tabler/home';
 import moon from '@iconify/icons-tabler/moon';
+import sun from '@iconify/icons-tabler/sun';
+import { Icon } from '@iconify/react';
 import { useLocalStorageState } from 'ahooks';
-import { useEffect } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { MENU } from '@/constants/navbar';
+import { useEffect } from 'react';
 
 export default function Navbar() {
   const router = useRouter();
@@ -49,8 +49,8 @@ export default function Navbar() {
           clipPath: isDark ? [...clipPath].reverse() : clipPath,
         },
         {
-          duration: 300,
-          easing: 'ease-in',
+          duration: 1000,
+          easing: 'ease-in-out',
           pseudoElement: isDark
             ? '::view-transition-old(root)'
             : '::view-transition-new(root)',
@@ -73,7 +73,7 @@ export default function Navbar() {
     }
   }, [theme]);
   return (
-    <div className="flex h-24 items-center justify-between p-4">
+    <div className="container mx-auto flex h-24 items-center justify-between p-4">
       {router.pathname !== '/' && (
         <Link
           href="/"

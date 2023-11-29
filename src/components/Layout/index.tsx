@@ -1,7 +1,7 @@
-import Head from 'next/head';
-import Navbar from './navbar';
-import Footer from './footer';
 import { Inter } from 'next/font/google';
+import Head from 'next/head';
+import Footer from './footer';
+import Navbar from './navbar';
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
@@ -20,12 +20,12 @@ export default function DefaultLayout({ children }: Props) {
       </Head>
       <main
         className={
-          'container mx-auto flex h-full flex-col text-slate-500 dark:bg-neutral-900 dark:text-slate-400 overflow-auto' +
+          'flex h-full flex-col overflow-auto text-slate-500 dark:bg-neutral-900 dark:text-slate-400' +
           inter.className
         }
       >
         <Navbar />
-        <div className="flex-1 p-4">{children}</div>
+        <div className="container mx-auto flex-1 p-4">{children}</div>
         <Footer />
       </main>
     </>
