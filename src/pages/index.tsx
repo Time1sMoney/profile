@@ -1,8 +1,7 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import logo from 'public/dog.png';
-import { Icon } from '@iconify/react';
 import mailIcon from '@iconify/icons-tabler/mail';
+import { Icon } from '@iconify/react';
+import Image from 'next/image';
+import logo from 'public/dog.png';
 export default function Home() {
   return (
     <div className="container mx-auto h-full overflow-auto p-10">
@@ -18,19 +17,8 @@ export default function Home() {
           <a href="https://codercoin.top">Codercoin</a>
         </span>
       </div>
-      <div className="space-y-2 mt-8">
+      <div className="mt-8 space-y-2">
         <p>😊Hey!,I am codercoin,a front-end engineer.</p>
-        <p>
-          <span>
-            This is my personal website, is to collect some technical community
-            or interesting web sites.you can find those in
-          </span>
-          <Link href="./navigator" className="underline">
-            <span className="ml-1 hover:text-slate-900 dark:hover:text-slate-300">
-              here
-            </span>
-          </Link>
-        </p>
       </div>
       <div className="mt-8 text-lg font-semibold">What i use in my work ?</div>
       <ul className="mt-4 space-y-2">
@@ -38,9 +26,7 @@ export default function Home() {
           Front-End : React / Vue / Next.js / Typescript / Tailwindcss / Zustand
           / Pinia / React-router / Ant Design / Ahooks / Iconify{' '}
         </li>
-        <li>
-          Back-end: Node.js / Python / Koa / Nest / Prisma / MongoDB / MySQL
-        </li>
+        <li>Back-end: Node.js / Koa / Nest / Prisma / MongoDB / MySQL</li>
         <li>Design: PS / 摹客</li>
         <li>Tools: VSCode / Postman / Apifox</li>
       </ul>
@@ -50,7 +36,7 @@ export default function Home() {
           <span>Contact me:</span>
           <span className="flex items-center gap-2">
             <Icon icon={mailIcon} />
-            lichenbin1119@qq.com
+            1015761882@qq.com | lichenbin1119@gmail.com
           </span>
         </li>
       </ul>
