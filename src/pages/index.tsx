@@ -18,19 +18,19 @@ export default function Home() {
         </span>
       </div>
       <div className="mt-8 space-y-2">
-        <p>😊Hey!,I am codercoin,a front-end engineer.</p>
+        <p>😊Hey! Nice to meet you.</p>
       </div>
       <div className="mt-8 text-lg font-semibold">What i use in my work ?</div>
       <ul className="mt-4 space-y-2">
         <li>
-          Front-End : React / Vue / Next.js / Typescript / Tailwindcss / Zustand
+          Front-End : React / Vue / Vite / Next.js / Typescript / Tailwindcss / Zustand
           / Pinia / React-router / Ant Design / Ahooks / Iconify{' '}
         </li>
         <li>Back-end: Node.js / Koa / Nest / Prisma / MongoDB / MySQL</li>
         <li>Design: PS / 摹客</li>
         <li>Tools: VSCode / Postman / Apifox</li>
       </ul>
-      <div className="mt-8 text-lg font-semibold">About Work</div>
+      <div className="mt-8 text-lg font-semibold">About Job</div>
       <ul className="mt-4 space-y-2">
         <li className="flex items-center gap-2">
           <span>Contact me:</span>

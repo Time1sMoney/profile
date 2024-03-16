@@ -104,7 +104,7 @@ export default function Navbar() {
             className="cursor-pointer hover:text-slate-900 dark:hover:text-slate-300"
           />
         </a>
-        <a href="https://github.com/codercoin98" target="_blank">
+        <a href="https://github.com/chenbinli-dev" target="_blank">
           <Icon
             icon={githubLogo}
             fontSize={24}
