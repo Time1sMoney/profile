@@ -1,5 +1,5 @@
-import mailIcon from '@iconify/icons-tabler/mail';
-import { Icon } from '@iconify/react';
+'use client';
+import Icons from '@/components/Icons';
 import Image from 'next/image';
 import logo from 'public/dog.png';
 export default function Home() {
@@ -20,22 +20,22 @@ export default function Home() {
       <div className="mt-8 space-y-2">
         <p>😊Hey! Nice to meet you.</p>
       </div>
-      <div className="mt-8 text-lg font-semibold">What i use in my work ?</div>
+      <div className="mt-8 text-lg font-semibold">What I Use ?</div>
       <ul className="mt-4 space-y-2">
         <li>
-          Front-End : React / Vue / Vite / Next.js / Typescript / Tailwindcss / Zustand
-          / Pinia / React-router / Ant Design / Ahooks / Iconify{' '}
+          Client Side : React / Vue / Vite / Next.js / Typescript / Tailwindcss /
+          Zustand / Pinia / React-router / Ant Design / Ahooks / Iconify{' '}
         </li>
-        <li>Back-end: Node.js / Koa / Nest / Prisma / MongoDB / MySQL</li>
-        <li>Design: PS / 摹客</li>
-        <li>Tools: VSCode / Postman / Apifox</li>
+        <li>Server Side : Node.js / Koa / Nest / Prisma / MongoDB / MySQL</li>
+        <li>UI Design : PS / 摹客</li>
+        <li>Tools : VSCode / Postman / Apifox</li>
       </ul>
       <div className="mt-8 text-lg font-semibold">About Job</div>
       <ul className="mt-4 space-y-2">
         <li className="flex items-center gap-2">
-          <span>Contact me:</span>
+          <span>Contact Me :</span>
           <span className="flex items-center gap-2">
-            <Icon icon={mailIcon} />
+            <Icons name="mailIcon" />
             1015761882@qq.com | lichenbin1119@gmail.com
           </span>
         </li>

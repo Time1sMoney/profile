@@ -11,7 +11,9 @@ export default function Footer() {
       >
         赣ICP备2023004076号
       </a>
-      <span className="text-gray-400">Copyright© 2023 | Made with ❤️</span>
+      <span className="text-gray-400">
+        Copyright©2023-{dayjs().get('year')} | Made with ❤️
+      </span>
     </footer>
   );
 }
