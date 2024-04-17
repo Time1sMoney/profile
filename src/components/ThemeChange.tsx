@@ -66,7 +66,7 @@ const ThemeChange: React.FC = () => {
     <Icons
       name={theme === 'light' ? 'sun' : 'moon'}
       size={24}
-      className="cursor-pointer hover:text-slate-900 dark:hover:text-slate-300"
+      className="cursor-pointer hover:text-primary"
       onClick={toggleTheme}
     />
   );

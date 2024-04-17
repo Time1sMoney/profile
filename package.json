@@ -16,7 +16,6 @@
     "next": "14.1.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-fast-marquee": "^1.5.2",
     "typescript": "5.0.3"
   },
   "devDependencies": {
@@ -36,7 +35,7 @@
     "postcss": "^8.4.21",
     "prettier": "^2.8.7",
     "prettier-plugin-tailwindcss": "^0.2.8",
-    "tailwindcss": "^3.3.1",
+    "tailwindcss": "^3.4.3",
     "tailwindcss-animate": "^1.0.7"
   },
   "engines": {

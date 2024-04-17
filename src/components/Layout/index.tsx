@@ -12,12 +12,14 @@ export default function DefaultLayout({ children }: Props) {
   return (
     <main
       className={
-        'flex h-full flex-col overflow-auto text-slate-500 dark:bg-neutral-900 dark:text-slate-400' +
+        'h-full overflow-y-auto bg-gradient-to-tr from-slate-200 to-white bg-fixed dark:from-black dark:to-slate-800 dark:text-white' +
         inter.className
       }
     >
       <Navbar />
-      <div className="container mx-auto flex-1 p-4">{children}</div>
+      <div className="container mx-auto flex-1 p-4 dark:text-white">
+        {children}
+      </div>
       <Footer />
     </main>
   );
