@@ -1,6 +1,12 @@
 'use client';
 import Icons from '@/components/Icons';
+import type { MouseEvent } from 'react';
 export default function Home() {
+  const handleClick = (e: MouseEvent) => {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(e.currentTarget.innerHTML);
+    }
+  };
   return (
     <div className="container mx-auto h-full space-y-10 overflow-auto p-10">
       <div className="cursor-pointer text-2xl font-semibold">Hey.</div>
@@ -44,11 +50,17 @@ export default function Home() {
       </p>
       <div className="flex items-center gap-2">
         <Icons name="mailIcon" size={24} />
-        <span className="hover:underline hover:underline-offset-4">
+        <span
+          className="cursor-copy hover:underline hover:underline-offset-4"
+          onClick={handleClick}
+        >
           1015761882@qq.com
         </span>
         |
-        <span className="hover:underline hover:underline-offset-4">
+        <span
+          className="cursor-copy hover:underline hover:underline-offset-4"
+          onClick={handleClick}
+        >
           lichenbin1119@gmail.com
         </span>
       </div>
