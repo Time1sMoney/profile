@@ -12,7 +12,7 @@ export default function DefaultLayout({ children }: Props) {
   return (
     <main
       className={
-        'h-full overflow-y-auto bg-gradient-to-tr from-slate-200 to-white bg-fixed dark:from-black dark:to-slate-800 dark:text-white' +
+        'h-full overflow-y-auto bg-gradient-to-tr from-slate-200 to-white bg-fixed dark:from-black dark:to-slate-800 dark:text-white ' +
         inter.className
       }
     >
