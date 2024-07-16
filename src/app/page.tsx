@@ -11,7 +11,10 @@ export default function Home() {
     <div className="container mx-auto h-full space-y-10 overflow-auto p-10">
       <div className="cursor-pointer text-2xl font-semibold">Hey.</div>
       <p className="w-1/2 break-words text-lg">
-        I am a web developer and independent game producer.I mainly use{' '}
+        I am a web developer and independent game producer.
+      </p>
+      <p className="w-1/2 break-words text-lg">
+        I mainly use{' '}
         <a
           href="https://react.dev/"
           target="_blank"
@@ -27,7 +30,7 @@ export default function Home() {
         >
           Vue.js
         </a>{' '}
-        to build applications, while I prefer to use{' '}
+        to build applications, and similarly I like to use{' '}
         <a
           href="https://nodejs.org/"
           target="_blank"
@@ -35,15 +38,28 @@ export default function Home() {
         >
           Node.js
         </a>{' '}
-        to service my applications. Yes, I love the experience of writing
-        JavaScript, even though it has a lot of shortcomings. In addition to
-        working as a front-end development engineer, I will devote my spare time
-        to game production, which is a big project, and I will finish it slowly
-        and carefully, because it has always been my dream.
+        and{' '}
+        <a
+          href="https://go.dev/"
+          target="_blank"
+          className="link font-semibold"
+        >
+          Golang
+        </a>{' '}
+        to write server-side applications. In addition to the front-end
+        development work, I will use{' '}
+        <a
+          href="https://godotengine.org/"
+          target="_blank"
+          className="link font-semibold"
+        >
+          Godot
+        </a>{' '}
+        to make independent games in my spare time, which is a big project for
+        me, and the project is still in the early stages.
       </p>
       <p className="w-1/2 whitespace-pre-line text-lg">
-        Like most people, I like to play video games, but in addition to that,
-        pixel art and cycling also fascinate me.
+        Besides writing programs, I enjoy playing video games and riding bikes.
       </p>
       <p className="w-1/2 whitespace-pre-line text-lg">
         If you have any questions, please contact me by email.

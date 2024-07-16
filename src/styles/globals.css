@@ -43,7 +43,7 @@ html {
     @apply relative inline-flex w-full h-full cursor-pointer items-center gap-4 rounded border-2 border-dashed p-2 hover:bg-slate-200 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-300;
   }
   .link {
-    @apply relative whitespace-nowrap z-10 hover:after:top-[0%] after:content-[''] after:absolute after:z-[-1] after:top-[80%] after:-left-[0.1em] after:-right-[0.1em] after:bottom-0 after:bg-primary after:transition-all after:duration-300 after:ease-out;
+    @apply relative whitespace-nowrap z-10 dark:hover:text-black hover:text-white transition-colors duration-300 ease-linear hover:after:top-[0%] after:content-[''] after:absolute after:z-[-1] after:top-[80%] after:-left-[0.1em] after:-right-[0.1em] after:bottom-0 after:bg-primary after:transition-all after:duration-300 after:ease-out;
   }
 }
 @layer utilities {
