@@ -4,6 +4,7 @@ import reactIcon from '@iconify/icons-carbon/logo-react';
 import twitterLogo from '@iconify/icons-carbon/logo-twitter';
 import astroIcon from '@iconify/icons-simple-icons/astro';
 import jsIcon from '@iconify/icons-simple-icons/nodedotjs';
+import linkIcon from '@iconify/icons-tabler/arrow-up-right';
 import bookIcon from '@iconify/icons-tabler/book';
 import bilibiliLogo from '@iconify/icons-tabler/brand-bilibili';
 import viteIcon from '@iconify/icons-tabler/brand-vite';
@@ -40,7 +41,8 @@ export type IconNames =
   | 'jsonIcon'
   | 'chartIcon'
   | 'jsIcon'
-  | 'templateIcon';
+  | 'templateIcon'
+  | 'linkIcon';
 
 const iconset: Record<IconNames, IconifyIcon> = {
   moon,
@@ -58,6 +60,7 @@ const iconset: Record<IconNames, IconifyIcon> = {
   chartIcon,
   jsIcon,
   templateIcon,
+  linkIcon,
 };
 const Icons: React.FC<Props> = (props) => {
   const { name, size, ...rest } = props;

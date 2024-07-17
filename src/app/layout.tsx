@@ -1,4 +1,4 @@
-import DefaultLayout from '@/components/Layout';
+import Layout from '@/components/Layout';
 import '@/styles/globals.css';
 import { Metadata } from 'next';
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <DefaultLayout>{children}</DefaultLayout>
+        <Layout>{children}</Layout>
       </body>
     </html>
   );

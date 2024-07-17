@@ -8,11 +8,11 @@ const inter = Inter({
 interface Props {
   children: React.ReactNode;
 }
-export default function DefaultLayout({ children }: Props) {
+export default function Layout({ children }: Props) {
   return (
     <main
       className={
-        'h-full overflow-y-auto bg-gradient-to-tr from-slate-200 to-white bg-fixed dark:from-black dark:to-slate-800 dark:text-white ' +
+        'flex flex-col h-full overflow-y-auto bg-gradient-to-tr from-slate-200 to-white bg-fixed dark:from-black dark:to-slate-800 dark:text-white ' +
         inter.className
       }
     >
