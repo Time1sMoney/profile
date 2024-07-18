@@ -1,21 +1,28 @@
 'use client';
 import { useLocalStorageState } from 'ahooks';
-import { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import React, { useEffect } from 'react';
 import Icons from './Icons';
 
-const ThemeChange: React.FC = () => {
-  const [theme, setTheme] = useLocalStorageState('theme', {
+interface Props {
+  style?: React.CSSProperties;
+  className?: string;
+}
+
+const ThemeChange: React.FC<Props> = ({ className, style }) => {
+  const [theme, setTheme] = useLocalStorageState<string>('theme', {
     defaultValue: 'light',
   });
   // Change theme
   const toggleTheme = (e: React.MouseEvent) => {
+    console.log(e);
     // @ts-expect-error: View transition API
     if (!document.startViewTransition) {
       setTheme((theme) => (theme === 'dark' ? 'light' : 'dark'));
       return;
     }
-    const x = e.clientX;
-    const y = e.clientY;
+    const x = e.nativeEvent.clientX;
+    const y = e.nativeEvent.clientY;
     const endRadius = Math.hypot(
       Math.max(x, innerWidth - x),
       Math.max(y, innerWidth - y)
@@ -63,12 +70,25 @@ const ThemeChange: React.FC = () => {
     }
   }, [theme]);
   return (
-    <Icons
-      name={theme === 'light' ? 'sun' : 'moon'}
-      size={24}
-      className="cursor-pointer hover:text-primary"
+    <motion.button
+      whileHover={{ scale: 1.2, rotate: 360 }}
+      whileTap={{
+        scale: 0.8,
+        rotate: -360,
+      }}
+      className={
+        'group cursor-pointer rounded-full bg-slate-200 p-2 dark:bg-slate-800 ' +
+        className
+      }
+      style={style}
       onClick={toggleTheme}
-    />
+    >
+      <Icons
+        name={theme === 'light' ? 'sun' : 'moon'}
+        size={24}
+        className=" group-hover:text-primary "
+      />
+    </motion.button>
   );
 };
 export default ThemeChange;

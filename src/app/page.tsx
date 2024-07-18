@@ -1,6 +1,6 @@
 'use client';
-import Icons from '@/components/Icons';
 import ItemsGrid from '@/components/ItemsGrid';
+import { motion } from 'framer-motion';
 import type { MouseEvent } from 'react';
 export default function Home() {
   const handleClick = (e: MouseEvent) => {
@@ -9,7 +9,7 @@ export default function Home() {
     }
   };
   return (
-    <div className="container mx-auto grid h-full grid-cols-2 max-md:grid-cols-1">
+    <div className="container mx-auto grid h-full grid-cols-2 pt-10 max-md:grid-cols-1">
       <div className="col-span-1 h-full space-y-10 p-10">
         <div className="cursor-pointer text-2xl font-semibold">Hey.</div>
         <p className="break-words text-lg">
@@ -64,27 +64,14 @@ export default function Home() {
           Besides writing programs, I enjoy playing video games and riding
           bikes.
         </p>
-        <p className="whitespace-pre-line text-lg">
-          If you have any questions, please contact me by email.
-        </p>
-        <div className="flex flex-wrap items-center gap-2">
-          <Icons name="mailIcon" size={24} />
-          <span
-            className="cursor-copy hover:underline hover:underline-offset-4"
-            onClick={handleClick}
-          >
-            1015761882@qq.com
-          </span>
-          |
-          <span
-            className="cursor-copy hover:underline hover:underline-offset-4"
-            onClick={handleClick}
-          >
-            lichenbin1119@gmail.com
-          </span>
-        </div>
       </div>
-      <ItemsGrid />
+      <motion.div
+        animate={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: '50%' }}
+        transition={{ duration: 1 }}
+      >
+        <ItemsGrid />
+      </motion.div>
     </div>
   );
 }

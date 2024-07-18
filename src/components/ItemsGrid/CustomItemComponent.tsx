@@ -9,10 +9,10 @@ interface Props {
   children?: React.ReactNode;
 }
 
-const GridItem: React.ForwardRefRenderFunction<
-  HTMLDivElement,
-  Props
-> = ({ children, ...props }, ref) => {
+const GridItem: React.ForwardRefRenderFunction<HTMLDivElement, Props> = (
+  { children, ...props },
+  ref
+) => {
   return (
     <div {...props} ref={ref}>
       {children}
@@ -20,6 +20,6 @@ const GridItem: React.ForwardRefRenderFunction<
   );
 };
 
-const CustomGridItemComponent = forwardRef(GridItem)
+const CustomGridItemComponent = forwardRef(GridItem);
 
 export default CustomGridItemComponent;

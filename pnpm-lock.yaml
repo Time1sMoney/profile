@@ -9,11 +9,14 @@ importers:
   .:
     dependencies:
       ahooks:
-        specifier: ^3.7.7
-        version: 3.7.8(react@18.2.0)
+        specifier: ^3.8.0
+        version: 3.8.0(react@18.2.0)
       dayjs:
         specifier: ^1.11.7
         version: 1.11.10
+      framer-motion:
+        specifier: ^11.3.6
+        version: 11.3.6(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       next:
         specifier: 14.1.4
         version: 14.1.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -361,9 +364,6 @@ packages:
   '@tsconfig/node16@1.0.4':
     resolution: {integrity: sha512-vxhUy4J8lyeyinH7Azl1pdd43GJhZH/tP2weN8TntQblOY+A0XbT8DJk1/oCPuOOyg/Ja757rG0CgHcWC8OfMA==}
 
-  '@types/js-cookie@2.2.7':
-    resolution: {integrity: sha512-aLkWa0C0vO5b4Sr798E26QgOkss68Un0bLjs7u9qxzPT5CG+8DuNTffWES58YzJs3hrVAOs1wonycqEBqNJubA==}
-
   '@types/json5@0.0.29':
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
 
@@ -443,11 +443,8 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
-  ahooks-v3-count@1.0.0:
-    resolution: {integrity: sha512-V7uUvAwnimu6eh/PED4mCDjE7tokeZQLKlxg9lCTMPhN+NjsSbtdacByVlR1oluXQzD3MOw55wylDmQo4+S9ZQ==}
-
-  ahooks@3.7.8:
-    resolution: {integrity: sha512-e/NMlQWoCjaUtncNFIZk3FG1ImSkV/JhScQSkTqnftakRwdfZWSw6zzoWSG9OMYqPNs2MguDYBUFFC6THelWXA==}
+  ahooks@3.8.0:
+    resolution: {integrity: sha512-M01m+mxLRNNeJ/PCT3Fom26UyreTj6oMqJBetUrJnK4VNI5j6eMA543Xxo53OBXn6XibA2FXKcCCgrT6YCTtKQ==}
     engines: {node: '>=8.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -1017,6 +1014,20 @@ packages:
 
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
+
+  framer-motion@11.3.6:
+    resolution: {integrity: sha512-olpX48qfoSIDjhw0RbolhOGBQmdMAXHHpSI0PFdTj5LeXChcf5F4ApShs0mQ6FPEPOj7dnEvSyB07UgRK5G9Jw==}
+    peerDependencies:
+      '@emotion/is-prop-valid': '*'
+      react: ^18.0.0
+      react-dom: ^18.0.0
+    peerDependenciesMeta:
+      '@emotion/is-prop-valid':
+        optional: true
+      react:
+        optional: true
+      react-dom:
+        optional: true
 
   fs-extra@11.2.0:
     resolution: {integrity: sha512-PmDi3uwK5nFuXh7XDTlVnS17xJS7vW36is2+w3xcv8SVxiB4NyATf4ctkVY5bkSjX0Y4nbvZCq1/EjtEyr9ktw==}
@@ -1808,6 +1819,9 @@ packages:
       react: '>= 16.3.0'
       react-dom: '>= 16.3.0'
 
+  react-fast-compare@3.2.2:
+    resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==}
+
   react-grid-layout@1.4.4:
     resolution: {integrity: sha512-7+Lg8E8O8HfOH5FrY80GCIR1SHTn2QnAYKh27/5spoz+OHhMmEhU/14gIkRzJOtympDPaXcVRX/nT1FjmeOUmQ==}
     peerDependencies:
@@ -2572,8 +2586,6 @@ snapshots:
 
   '@tsconfig/node16@1.0.4': {}
 
-  '@types/js-cookie@2.2.7': {}
-
   '@types/json5@0.0.29': {}
 
   '@types/minimist@1.2.5': {}
@@ -2656,18 +2668,15 @@ snapshots:
 
   acorn@8.11.3: {}
 
-  ahooks-v3-count@1.0.0: {}
-
-  ahooks@3.7.8(react@18.2.0):
+  ahooks@3.8.0(react@18.2.0):
     dependencies:
       '@babel/runtime': 7.23.8
-      '@types/js-cookie': 2.2.7
-      ahooks-v3-count: 1.0.0
       dayjs: 1.11.10
       intersection-observer: 0.12.2
       js-cookie: 2.2.1
       lodash: 4.17.21
       react: 18.2.0
+      react-fast-compare: 3.2.2
       resize-observer-polyfill: 1.5.1
       screenfull: 5.2.0
       tslib: 2.6.2
@@ -3424,6 +3433,13 @@ snapshots:
 
   fraction.js@4.3.7: {}
 
+  framer-motion@11.3.6(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+    dependencies:
+      tslib: 2.6.2
+    optionalDependencies:
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+
   fs-extra@11.2.0:
     dependencies:
       graceful-fs: 4.2.11
@@ -4131,6 +4147,8 @@ snapshots:
       prop-types: 15.8.1
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+
+  react-fast-compare@3.2.2: {}
 
   react-grid-layout@1.4.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:

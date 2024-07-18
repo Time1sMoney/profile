@@ -45,6 +45,9 @@ html {
   .link {
     @apply relative whitespace-nowrap z-10 dark:hover:text-black hover:text-white transition-colors duration-300 ease-linear hover:after:top-[0%] after:content-[''] after:absolute after:z-[-1] after:top-[80%] after:-left-[0.1em] after:-right-[0.1em] after:bottom-0 after:bg-primary after:transition-all after:duration-300 after:ease-out;
   }
+  .grid-item {
+    @apply relative flex cursor-grab items-center justify-center rounded-xl shadow-lg outline outline-1 bg-transparent dark:outline-slate-700 overflow-hidden hover:shadow;
+  }
 }
 @layer utilities {
   .hover-transition {

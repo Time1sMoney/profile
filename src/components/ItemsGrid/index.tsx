@@ -1,15 +1,20 @@
-import Link from 'next/link';
-import { useRef, useState } from 'react';
+import { useState } from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
+
+// rewrite style of placeholder of react-grid-layout
+
+import '@/styles/react-grid-layout.css';
+
 import Icons from '../Icons';
+import ThemeChange from '../ThemeChange';
 import CustomGridItemComponent from './CustomItemComponent';
 interface LinkItem {
   key: string;
   label: string;
   icon?: React.ReactNode;
-  url: string;
+  url?: string;
   className?: string;
 }
 
@@ -27,7 +32,6 @@ const items: LinkItem[] = [
       />
     ),
     url: 'https://blog-codercoin.vercel.app',
-    className: 'bg-gradient-to-tr from-purple-400 to-purple-800 text-white',
   },
   {
     key: '2',
@@ -40,7 +44,6 @@ const items: LinkItem[] = [
       />
     ),
     url: 'https://twitter.com/mozlilove',
-    className: 'bg-gradient-to-br from-blue-600 to-blue-800 text-white',
   },
   {
     key: '3',
@@ -53,7 +56,6 @@ const items: LinkItem[] = [
       />
     ),
     url: 'https://github.com/chenbinli-dev',
-    className: 'bg-gradient-to-bl from-slate-600 to-zinc-800 text-white',
   },
   {
     key: '4',
@@ -66,16 +68,23 @@ const items: LinkItem[] = [
       />
     ),
     url: 'https://space.bilibili.com/164577534',
-    className: 'bg-gradient-to-bl from-pink-600 to-pink-800 text-white',
+  },
+  {
+    key: 'email',
+    label: 'Email',
+  },
+  {
+    key: 'theme',
+    label: 'Theme',
   },
 ];
 
 function generateLayout(items: LinkItem[]) {
-  const layput_1 = items.map((item, index) => ({
+  const layout_1 = items.map((item, index) => ({
     i: item.key,
     x: index % 2,
     y: index / 1,
-    w: 1,
+    w: item.key === 'email' ? 2 : 1,
     h: 1,
   }));
   const layout_2 = items.map((item, index) => ({
@@ -86,48 +95,71 @@ function generateLayout(items: LinkItem[]) {
     h: 1,
   }));
   const responsiveLayout: ReactGridLayout.Layouts = {
-    xxs: layput_1,
-    xs: layput_1,
-    lg: layput_1,
-    md: layout_2,
-    sm: layout_2,
+    lg: layout_1,
+    md: layout_1,
+    sm: layout_1,
+    xs: layout_1,
+    xxs: layout_2,
   };
   return responsiveLayout;
 }
 const ItemsGrid: React.FC = () => {
   const [layouts, setLayouts] = useState(() => generateLayout(items));
-  const containerRef = useRef<HTMLDivElement>(null);
 
   return (
     <ResponsiveLayout
       layouts={layouts}
-      cols={{ xxs: 2, xs: 2, lg: 2, md: 1, sm: 1 }}
+      breakpoints={{ lg: 1200, md: 996, sm: 768, xs: 480, xxs: 0 }}
+      cols={{ lg: 2, md: 2, sm: 2, xs: 2, xxs: 1 }}
       rowHeight={150}
       isResizable={false}
-      className="h-full"
+      margin={[20, 20]}
+      draggableCancel=".cancelDrag"
     >
       {items.map((item) => (
         <CustomGridItemComponent
           key={item.key}
-          className={
-            'hover:scale-120 group relative flex h-full cursor-grab items-center justify-center overflow-hidden rounded-xl hover:shadow ' +
-              item.className ?? ''
-          }
-          onMouseDown={(e) => e.stopPropagation()}
+          className={'grid-item group ' + item.className ?? ''}
         >
           {item.icon}
           <span className="absolute bottom-2 left-4 translate-y-10 transition-all duration-300 ease-linear group-hover:-translate-y-0 group-active:-translate-y-0">
             {item.label}
           </span>
-          <Link
+          <a
             href={item.url}
             target="_blank"
-            className="absolute bottom-2 right-4 z-50 translate-x-10 cursor-pointer rounded-full p-2 transition-all duration-300 ease-linear hover:scale-110 hover:outline hover:outline-purple-100 group-hover:-translate-x-0 group-active:-translate-x-0"
+            className="cancelDrag absolute bottom-2 right-4 z-50 translate-x-10 cursor-pointer rounded-full p-2 transition-all duration-300 ease-linear hover:scale-110 hover:outline hover:outline-purple-500 group-hover:-translate-x-0 group-active:-translate-x-0"
           >
             <Icons name="linkIcon" size={20} />
-          </Link>
+          </a>
         </CustomGridItemComponent>
       ))}
+      <CustomGridItemComponent key="email" className="grid-item group">
+        <div className="flex flex-wrap items-center gap-4">
+          <Icons
+            name="mailIcon"
+            size={24}
+            className="transition-all duration-300 ease-linear group-hover:scale-125"
+          />
+          <div className="flex flex-col text-lg">
+            <em className="cursor-copy hover:underline hover:underline-offset-4">
+              1015761882@qq.com
+            </em>
+            <em className="cursor-copy hover:underline hover:underline-offset-4">
+              lichenbin1119@gmail.com
+            </em>
+          </div>
+        </div>
+        <span className="absolute bottom-2 left-4 translate-y-10 transition-all duration-300 ease-linear group-hover:-translate-y-0 group-active:-translate-y-0">
+          Contact Me
+        </span>
+      </CustomGridItemComponent>
+      <CustomGridItemComponent key="theme" className="grid-item group">
+        <ThemeChange className="cancelDrag" />
+        <span className="absolute bottom-2 left-4 translate-y-10 transition-all duration-300 ease-linear group-hover:-translate-y-0 group-active:-translate-y-0">
+          Theme
+        </span>
+      </CustomGridItemComponent>
     </ResponsiveLayout>
   );
 };
