@@ -35,6 +35,12 @@ html {
 ::view-transition-new(root) {
   z-index: 1;
 }
+
+/* reset default style of react-grid-layout */
+.react-grid-item.react-grid-placeholder {
+  background: none !important;
+}
+
 @layer components {
   .item {
     @apply flex cursor-pointer items-center justify-center text-ellipsis rounded-lg p-1 hover:bg-slate-200 hover:text-slate-900 active:bg-slate-200 dark:hover:bg-slate-800 dark:hover:text-slate-300 dark:active:bg-slate-800;

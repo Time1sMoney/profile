@@ -2,11 +2,6 @@ import { useState } from 'react';
 import { Responsive, WidthProvider } from 'react-grid-layout';
 import 'react-grid-layout/css/styles.css';
 import 'react-resizable/css/styles.css';
-
-// rewrite style of placeholder of react-grid-layout
-
-import '@/styles/react-grid-layout.css';
-
 import Icons from '../Icons';
 import ThemeChange from '../ThemeChange';
 import CustomGridItemComponent from './CustomItemComponent';
