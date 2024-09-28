@@ -9,13 +9,20 @@ interface Props {
   className?: string;
 }
 
+function updateTheme(theme: string) {
+  if (theme === 'light') {
+    document.documentElement.classList.remove('dark');
+  } else {
+    document.documentElement.classList.add('dark');
+  }
+}
+
 const ThemeChange: React.FC<Props> = ({ className, style }) => {
   const [theme, setTheme] = useLocalStorageState<string>('theme', {
     defaultValue: 'light',
   });
   // Change theme
   const toggleTheme = (e: React.MouseEvent) => {
-    console.log(e);
     // @ts-expect-error: View transition API
     if (!document.startViewTransition) {
       setTheme((theme) => (theme === 'dark' ? 'light' : 'dark'));
@@ -32,9 +39,12 @@ const ThemeChange: React.FC<Props> = ({ className, style }) => {
     const transition = document.startViewTransition(() => {
       const root = document.documentElement;
       isDark = root.classList.contains('dark');
+      if (isDark) {
+        root.classList.remove('dark');
+      } else {
+        root.classList.add('dark');
+      }
       setTheme(() => (isDark ? 'light' : 'dark'));
-      root.classList.remove(isDark ? 'dark' : 'light');
-      root.classList.add(isDark ? 'light' : 'dark');
     });
     transition.ready.then(() => {
       const clipPath = [
@@ -57,17 +67,12 @@ const ThemeChange: React.FC<Props> = ({ className, style }) => {
   };
 
   useEffect(() => {
-    // @ts-expect-error
-    // if current browser doesn't support the view transition api
-    if (!document.startViewTransition) {
-      if (theme === 'light') {
-        document.documentElement.classList.remove('dark');
-        document.documentElement.classList.add('light');
-      } else {
-        document.documentElement.classList.remove('light');
-        document.documentElement.classList.add('dark');
-      }
-    }
+    const theme = localStorage.getItem('theme');
+    theme && updateTheme(theme);
+  }, []);
+
+  useEffect(() => {
+    theme && updateTheme(theme);
   }, [theme]);
   return (
     <motion.button
@@ -86,7 +91,7 @@ const ThemeChange: React.FC<Props> = ({ className, style }) => {
       <Icons
         name={theme === 'light' ? 'sun' : 'moon'}
         size={24}
-        className=" group-hover:text-primary "
+        className="group-hover:text-primary "
       />
     </motion.button>
   );

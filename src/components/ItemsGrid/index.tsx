@@ -111,24 +111,26 @@ const ItemsGrid: React.FC = () => {
       margin={[20, 20]}
       draggableCancel=".cancelDrag"
     >
-      {items.map((item) => (
-        <CustomGridItemComponent
-          key={item.key}
-          className={'grid-item group ' + item.className ?? ''}
-        >
-          {item.icon}
-          <span className="absolute bottom-2 left-4 translate-y-10 transition-all duration-300 ease-linear group-hover:-translate-y-0 group-active:-translate-y-0">
-            {item.label}
-          </span>
-          <a
-            href={item.url}
-            target="_blank"
-            className="cancelDrag absolute bottom-2 right-4 z-50 translate-x-10 cursor-pointer rounded-full p-2 transition-all duration-300 ease-linear hover:scale-110 hover:outline hover:outline-purple-500 group-hover:-translate-x-0 group-active:-translate-x-0"
+      {items
+        .filter((item) => item.key !== 'email' && item.key !== 'theme')
+        .map((item) => (
+          <CustomGridItemComponent
+            key={item.key}
+            className={'grid-item group ' + item.className ?? ''}
           >
-            <Icons name="linkIcon" size={20} />
-          </a>
-        </CustomGridItemComponent>
-      ))}
+            {item.icon}
+            <span className="absolute bottom-2 left-4 translate-y-10 transition-all duration-300 ease-linear group-hover:-translate-y-0 group-active:-translate-y-0">
+              {item.label}
+            </span>
+            <a
+              href={item.url}
+              target="_blank"
+              className="cancelDrag absolute bottom-2 right-4 z-50 translate-x-10 cursor-pointer rounded-full p-2 transition-all duration-300 ease-linear hover:scale-110 hover:outline hover:outline-purple-500 group-hover:-translate-x-0 group-active:-translate-x-0"
+            >
+              <Icons name="linkIcon" size={20} />
+            </a>
+          </CustomGridItemComponent>
+        ))}
       <CustomGridItemComponent key="email" className="grid-item group">
         <div className="flex flex-wrap items-center gap-4">
           <Icons
