@@ -1,7 +1,7 @@
 'use client';
-import { useLocalStorageState } from 'ahooks';
 import { motion } from 'framer-motion';
-import React, { useEffect } from 'react';
+import { useTheme } from 'next-themes';
+import React from 'react';
 import Icons from './Icons';
 
 interface Props {
@@ -9,19 +9,9 @@ interface Props {
   className?: string;
 }
 
-function updateTheme(theme: string) {
-  if (theme === 'light') {
-    document.documentElement.classList.remove('dark');
-  } else {
-    document.documentElement.classList.add('dark');
-  }
-}
-
 const ThemeChange: React.FC<Props> = ({ className, style }) => {
-  const [theme, setTheme] = useLocalStorageState<string>('theme', {
-    defaultValue: 'light',
-  });
-  // Change theme
+  const { theme, setTheme } = useTheme();
+  // Use View Transition API to create effect of theme change
   const toggleTheme = (e: React.MouseEvent) => {
     if (!document.startViewTransition) {
       setTheme((theme) => (theme === 'dark' ? 'light' : 'dark'));
@@ -65,14 +55,6 @@ const ThemeChange: React.FC<Props> = ({ className, style }) => {
     });
   };
 
-  useEffect(() => {
-    const theme = localStorage.getItem('theme');
-    theme && updateTheme(theme);
-  }, []);
-
-  useEffect(() => {
-    theme && updateTheme(theme);
-  }, [theme]);
   return (
     <motion.button
       whileHover={{ scale: 1.2, rotate: 360 }}
