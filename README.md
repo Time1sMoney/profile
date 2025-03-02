@@ -1,3 +1,3 @@
-# ✨[Codercoin](http://codercoin.top)
+# ✨About
 
-A site that focuses on front-end technology and offers some interesting tools.
+This page serves as a concise professional profile where you can find links to my social media platforms.
