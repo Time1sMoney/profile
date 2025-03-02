@@ -38,7 +38,7 @@ const items: LinkItem[] = [
         className="transition-all duration-300 ease-linear group-hover:scale-125"
       />
     ),
-    url: 'https://twitter.com/mozlilove',
+    url: 'https://twitter.com/_codercoin',
   },
   {
     key: '3',
@@ -50,7 +50,7 @@ const items: LinkItem[] = [
         className="transition-all duration-300 ease-linear group-hover:scale-125"
       />
     ),
-    url: 'https://github.com/chenbinli-dev',
+    url: 'https://github.com/Time1sMoney',
   },
   {
     key: '4',
@@ -116,7 +116,7 @@ const ItemsGrid: React.FC = () => {
         .map((item) => (
           <CustomGridItemComponent
             key={item.key}
-            className={'grid-item group ' + item.className ?? ''}
+            className={'grid-item group ' + item.className}
           >
             {item.icon}
             <span className="absolute bottom-2 left-4 translate-y-10 transition-all duration-300 ease-linear group-hover:-translate-y-0 group-active:-translate-y-0">

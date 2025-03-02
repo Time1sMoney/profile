@@ -23,7 +23,6 @@ const ThemeChange: React.FC<Props> = ({ className, style }) => {
   });
   // Change theme
   const toggleTheme = (e: React.MouseEvent) => {
-    // @ts-expect-error: View transition API
     if (!document.startViewTransition) {
       setTheme((theme) => (theme === 'dark' ? 'light' : 'dark'));
       return;
